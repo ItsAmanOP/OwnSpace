@@ -9,8 +9,14 @@ const io = new Server(PORT, {
 });
 
 io.on('connection', socket => {
-    socket.on('send-changes', delta => {                                  // Catching changes sent by the frontend.
-        socket.broadcast.emit('recieve-changes', delta);                  // Broadcasting the backend changes to all the frontend users.
+    socket.on('get-document', documentId => {
+        const data = "";
+        socket.join(documentId);
+        socket.emit('load-document', data);
+
+        socket.on('send-changes', delta => {                                  // Catching changes in socket sent by Quill from the frontend
+            socket.broadcast.to(documentId).emit('receive-changes', delta);                  // Broadcasting the backend changes to all the frontend users with same Id
+        })
     })
     
 });
