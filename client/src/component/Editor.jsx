@@ -68,6 +68,23 @@ const Editor = () => {
         }
 
     }, [quill, socket])
+
+    useEffect(() => {
+
+        if(socket === null || quill === null) return;
+
+        const handleChange = (delta) => {
+            quill.updateContents(delta);                                    // Broadcasting data recieved from backend to all the Quills 
+        }
+
+        socket && socket.on('recieve-changes', handleChange);
+
+        return () => {
+            socket && socket.off('recieve-changes', handleChange);
+        }
+
+    }, [quill, socket])
+
     return (
         <Component>
             <Box className='container' id='container'></Box>
