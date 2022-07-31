@@ -67,7 +67,7 @@ const Editor = () => {
             quill && quill.off('text-change', handleChange);
         }
 
-    }, [])
+    }, [quill, socket])
     return (
         <Component>
             <Box className='container' id='container'></Box>
