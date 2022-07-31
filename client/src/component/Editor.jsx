@@ -49,7 +49,25 @@ const Editor = () => {
         return () => {
             socketServer.disconnect();
         }
-    })
+    }, [])
+
+    useEffect(() => {
+
+        if(socket === null || quill === null) return;
+
+        const handleChange = (delta, oldData, source) => {
+            if(source !== 'user') return;
+
+            socket && socket.emit('send-changes', delta);
+        }
+
+        quill && quill.on('text-change', handleChange);
+
+        return () => {
+            quill && quill.off('text-change', handleChange);
+        }
+
+    }, [])
     return (
         <Component>
             <Box className='container' id='container'></Box>
