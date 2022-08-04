@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { NavLink } from "react-router-dom";
 import { useAuth0 } from '@auth0/auth0-react';
 
 
@@ -14,7 +13,7 @@ const NavbarEditor = () => {
       <section className="navbar-bg">
         <nav class="navbar navbar-expand-lg navbar-light ">
           <div class="container">
-            <a class="navbar-brand" href="#">
+            <a class="navbar-brand" href="/">
               OwnSpace
             </a>
             <button
