@@ -114,7 +114,7 @@ const Editor = () => {
 
     return (
         <Component>
-            <Box className='container' id='container'></Box>
+            <Box className='container containerQ' id='container'></Box>
         </Component>
     )
 }
