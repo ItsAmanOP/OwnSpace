@@ -195,5 +195,4 @@ Project Link: [https://github.com/ItsAmanOP/OwnSpace](https://github.com/ItsAman
  - [Quill](https://quilljs.com/)
  - [React](https://reactjs.org/)
  - [MUI](https://mui.com/)
- - [Quill](https://quilljs.com/)
  - [Auth0](https://auth0.com/blog/complete-guide-to-react-user-authentication/?utm_source=YouTube&utm_campaign=DevRel&utm_medium=link_placement)
