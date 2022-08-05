@@ -7,7 +7,7 @@
     OwnSpace is an awesome Document Collaboration Platform.
     OwnSpace provides real-time character by character updtation to users working on the same document. User can Sign Up or Login using Auth0 authentication and can start creating document. Each document is initiated with particular unique id.
   </p>
-  
+</div>
 
 <br />
 
